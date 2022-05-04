@@ -31,8 +31,17 @@ int main()
     cout << "Enter a number to add to the list (" << SENTINEL << " to end)";
     cin >> num;
     while (num != SENTINEL) {
-        // Part 2, create a new node pointer, and append it to the list.
+        // Part 2, create a new node pointer, and append it to   the list.
+    if (tail == nullptr) {
+      head = nullptr;
+    }
+      else {
+	      tail->next = nullptr;
+      }
+    tail = nullptr;
     
+
+
         cout << "Enter a number to add to the list (" << SENTINEL << " to end)";
         cin >> num;
     }
@@ -57,7 +66,7 @@ void printList(Node *head) {
   while(curr != nullptr) {
   cout << curr->data;
 	curr = curr->next;
-
+  
 }
 
   
