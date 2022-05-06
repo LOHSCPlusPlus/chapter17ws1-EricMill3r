@@ -32,13 +32,14 @@ int main()
     cin >> num;
     while (num != SENTINEL) {
         // Part 2, create a new node pointer, and append it to   the list.
+     Node* nodePtr = new Node(num);
     if (tail == nullptr) {
-      head = nullptr;
+      head = nodePtr;
     }
       else {
-	      tail->next = nullptr;
+	      tail->next = nodePtr;
       }
-    tail = nullptr;
+    tail = nodePtr;
     
 
 
